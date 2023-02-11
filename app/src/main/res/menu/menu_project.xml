@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:checkable="true"
+        android:id="@+id/projectListMyProject"
+        android:title="Proyek Aktif Saya"
+        android:icon="@drawable/ic_baseline_notifications_active_24"
+        android:tooltipText="Proyek Aktif Saya"
+        android:enabled="false"
+        android:visible="false"/>
+    <item
+        android:checkable="true"
+        android:id="@+id/projectListJoin"
+        android:title="Bergabung Proyek"
+        android:icon="@drawable/ic_baseline_find_in_page_24"
+        android:tooltipText="Bergabung Proyek"
+        android:checked="true"
+        />
+    <item
+        android:checkable="true"
+        android:id="@+id/projectDetails2"
+        android:title="Detil Proyek"
+        android:icon="@drawable/ic_baseline_details_24"
+        android:tooltipText="Riwayat Proyek Anda"
+        android:enabled="false"
+        android:visible="false"/>
+    <item
+        android:checkable="true"
+        android:id="@+id/uploadProgress2"
+        android:title="Kirim Progress Video"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:tooltipText="Kirim Progress"
+        android:enabled="false"
+        android:visible="false"/>
+    <item
+        android:checkable="true"
+        android:id="@+id/uploadReceiptImage"
+        android:title="Upload Faktur"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:tooltipText="Kirim Progress"
+        android:enabled="false"
+        android:visible="false"/>
+
+</menu>

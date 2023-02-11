@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_project"
+    app:startDestination="@id/projectListJoin">
+
+    <fragment
+        android:id="@+id/projectListMyProject"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.ProjectListMyProject"
+        android:label="fragment_project_list_my_project"
+        tools:layout="@layout/fragment_project_list_my_project" >
+        <action
+            android:id="@+id/myProjectToJoinProject"
+            app:destination="@id/projectListJoin" />
+        <action
+            android:id="@+id/myProjectToDetails"
+            app:destination="@id/projectDetails2" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectListJoin"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.ProjectListJoin"
+        android:label="fragment_project_list_join"
+        tools:layout="@layout/fragment_project_list_join" >
+        <action
+            android:id="@+id/joinProjectToMyProject"
+            app:destination="@id/projectListMyProject" />
+        <action
+            android:id="@+id/joinProjectToDetails"
+            app:destination="@id/projectDetails2" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectDetails2"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.ProjectDetails"
+        android:label="fragment_project_details"
+        tools:layout="@layout/fragment_project_details" >
+        <action
+            android:id="@+id/detailsToJoinProject"
+            app:destination="@id/projectListJoin" />
+        <action
+            android:id="@+id/detailsToMyProject"
+            app:destination="@id/projectListMyProject" />
+        <action
+            android:id="@+id/detailsToUploadProgress"
+            app:destination="@id/uploadProgress2" />
+        <action
+            android:id="@+id/action_projectDetails2_to_uploadReceiptImage"
+            app:destination="@id/uploadReceiptImage" />
+        <action
+            android:id="@+id/action_projectDetails2_to_adminMediaRead"
+            app:destination="@id/adminMediaRead" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadProgress2"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.UploadProgressVideo"
+        android:label="fragment_upload_progress"
+        tools:layout="@layout/fragment_upload_progress_video" >
+        <action
+            android:id="@+id/uploadProgressToProjectDetails"
+            app:destination="@id/projectDetails2" />
+        <action
+            android:id="@+id/uploadProgressToJoinProject"
+            app:destination="@id/projectListJoin" />
+        <action
+            android:id="@+id/uploadProgressToMyProject"
+            app:destination="@id/projectListMyProject" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadReceiptImage"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.UploadReceiptImage"
+        android:label="fragment_upload_receipt_image"
+        tools:layout="@layout/fragment_upload_receipt_image" >
+        <action
+            android:id="@+id/action_uploadReceiptImage_to_projectListJoin"
+            app:destination="@id/projectListJoin" />
+        <action
+            android:id="@+id/action_uploadReceiptImage_to_projectDetails2"
+            app:destination="@id/projectDetails2" />
+        <action
+            android:id="@+id/action_uploadReceiptImage_to_projectListMyProject"
+            app:destination="@id/projectListMyProject" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminMediaRead"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.AdminMediaRead"
+        android:label="fragment_admin_media_read"
+        tools:layout="@layout/fragment_admin_media_read" >
+        <action
+            android:id="@+id/action_adminMediaRead_to_projectListJoin"
+            app:destination="@id/projectListJoin" />
+        <action
+            android:id="@+id/action_adminMediaRead_to_projectDetails2"
+            app:destination="@id/projectDetails2" />
+        <action
+            android:id="@+id/action_adminMediaRead_to_projectListMyProject"
+            app:destination="@id/projectListMyProject" />
+        <action
+            android:id="@+id/action_adminMediaRead_to_adminMediaView"
+            app:destination="@id/adminMediaView" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminMediaView"
+        android:name="tech.socidia.proman.Activity.FragmentProjectList.AdminMediaView"
+        android:label="fragment_admin_media_view"
+        tools:layout="@layout/fragment_admin_media_view" >
+        <action
+            android:id="@+id/action_adminMediaView_to_adminMediaRead"
+            app:destination="@id/adminMediaRead" />
+    </fragment>
+</navigation>

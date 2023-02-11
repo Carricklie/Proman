@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adminMediaRead"
+        android:title="Halaman Admin"
+        android:icon="@drawable/ic_baseline_admin_panel_settings_24"
+        android:tooltipText="Halaman Admin"
+        />
+    <item
+        android:id="@+id/adminMediaView"
+        android:title="Detil Media"
+        android:icon="@drawable/ic_baseline_perm_media_24"
+        android:tooltipText="Detil Media"
+        android:enabled="false"
+        android:visible="false"/>
+</menu>

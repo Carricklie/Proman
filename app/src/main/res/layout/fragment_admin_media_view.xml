@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.FragmentProjectList.AdminMediaView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBarMediaView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/titleProgressTextInputlayoutMediaView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15sp"
+            android:layout_marginTop="10sp"
+            android:hint="Judul Progress"
+            app:boxCornerRadiusBottomEnd="5sp"
+            app:boxCornerRadiusBottomStart="5sp"
+            app:boxCornerRadiusTopEnd="5sp"
+            app:boxCornerRadiusTopStart="5sp"
+            app:helperText="Judul Progress Hari Ini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/adminMediaRecyclerView"
+            app:startIconDrawable="@drawable/ic_baseline_edit_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleProgressAdminViewEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:visibility="gone"
+            android:id="@+id/progressDescriptionTextInputLayoutMediaView"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15sp"
+            android:layout_marginTop="10sp"
+            android:hint="Deskripsi Progress"
+            app:boxCornerRadiusBottomEnd="5sp"
+            app:boxCornerRadiusBottomStart="5sp"
+            app:boxCornerRadiusTopEnd="5sp"
+            app:boxCornerRadiusTopStart="5sp"
+            app:helperText="Deskripsi Progress Hari Ini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleProgressTextInputlayoutMediaView"
+            app:startIconDrawable="@drawable/ic_baseline_description_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/progressDescriptionAdminViewEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text|textMultiLine"
+                android:lines="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/adminMediaRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="95sp"
+            android:layout_marginHorizontal="15sp"
+            android:paddingVertical="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/media_item" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:visibility="gone"
+            android:id="@+id/viewProgressAdminVideo"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressDescriptionTextInputLayoutMediaView"
+            app:resize_mode="fill"
+            app:auto_show="true"
+            app:surface_type="surface_view"
+            app:use_controller="true" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/viewReceiptAdminViewIV"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressDescriptionTextInputLayoutMediaView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

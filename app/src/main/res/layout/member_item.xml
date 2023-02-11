@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="180sp"
+        android:layout_height="70sp"
+        android:layout_marginVertical="10sp"
+        android:layout_marginHorizontal="10sp"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@android:color/transparent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:backgroundTint="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/memberProfilePictureIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anonymous" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/memberNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_marginTop="10sp"
+                android:text="Member Name"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5sp"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/memberRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posisi : "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="5sp"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toBottomOf="@+id/memberNameTV" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/memberPhoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+62 821792137 "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="5sp"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toBottomOf="@+id/memberNameTV" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

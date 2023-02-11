@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "85024145225",
+    "project_id": "promansocidia",
+    "storage_bucket": "promansocidia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85024145225:android:baef488d28bceefbec6498",
+        "android_client_info": {
+          "package_name": "tech.socidia.proman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85024145225-7cjv9hds1lps2gq9td1q9sv4nf7cd9up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.socidia.proman",
+            "certificate_hash": "b27b851176547fd0665c90e952ead49329776af5"
+          }
+        },
+        {
+          "client_id": "85024145225-m11ag7eq810germuprslvr0j5scmvc0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAumPUv9DqvZQe-AlTZcFnuNfYVWZvtM1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85024145225-m11ag7eq810germuprslvr0j5scmvc0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

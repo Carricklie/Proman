@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.FragmentProjectList.AdminMediaRead">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/backButtonAdminMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_200"
+            android:drawableLeft="@drawable/ic_round_keyboard_backspace_24"
+            android:text="Back"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="10sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chooseDateAdminTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="0.7"
+            android:hint="Tanggal yang ingin dilihat"
+            app:boxCornerRadiusBottomEnd="5sp"
+            app:boxCornerRadiusBottomStart="5sp"
+            app:boxCornerRadiusTopEnd="5sp"
+            app:boxCornerRadiusTopStart="5sp"
+            app:helperText="Klik Logo Kalender "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backButtonAdminMenu"
+            app:startIconDrawable="@drawable/ic_baseline_edit_calendar_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/chooseDateAdminEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutAdminChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginTop="10sp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseDateAdminTextInputLayout">
+            <Button
+                android:id="@+id/videoProgressButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="Video Progress"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginHorizontal="10sp"/>
+            <Button
+                android:id="@+id/imageReceiptButton"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gambar Faktur"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginHorizontal="10sp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/recyclerViewMembersAdminView"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutAdminChoice"
+            tools:listitem="@layout/member_item" />
+
+        <ProgressBar
+            android:id="@+id/progressBarMemberSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutAdminChoice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
